@@ -58,15 +58,13 @@ BABYLON.MeshBuilder.CreateSphere(
 scene
 );
 
-const mat=new BABYLON.StandardMaterial("mat",scene);
+const mat = new BABYLON.StandardMaterial("mat", scene);
 
-mat.diffuseTexture=
-new BABYLON.Texture("equi.png",scene);
+mat.emissiveTexture = new BABYLON.Texture("equi.png", scene);
 
-mat.specularColor=
-BABYLON.Color3.Black();
+mat.disableLighting = true;
 
-sphere.material=mat;
+sphere.material = mat;
 
 engine.runRenderLoop(()=>{
     scene.render();
